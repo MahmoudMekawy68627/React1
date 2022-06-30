@@ -8,6 +8,7 @@ import Home from './Pagess/home';
 import Shop from './Pagess/shop';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Product from "./Pagess/shop/Product";
+import Todo from './Pagess/todo/Todo'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
         <Route path="product/:id" element={<Product />} />
+        <Route path="/todo" element={<Todo />} />
 
       </Routes>
 

@@ -22,6 +22,9 @@ function Navbar() {
                 <li>
                     <Link to="/counter">Counter</Link>
                 </li>
+                <li>
+                    <Link to="/todo">Todo</Link>
+                </li>
             </ul>
 
 
