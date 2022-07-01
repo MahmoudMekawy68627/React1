@@ -1,55 +1,10 @@
-import { createStore } from "redux";
+import { configureStore } from '@reduxjs/toolkit'
+import {todoReducer} from './config'
+import todoSlice from './features/todo.slice'
 
-// action 
 
-export const addTodoAction = (payload)=>{
-    return{
-        type:"ADD_TODO", // lazem ykon upperCase
-        payload: payload
+export const store = configureStore({
+    reducer: {
+        todo:todoSlice,
     }
-}
-
-export const deleteTodAction = (payload)=> {
-    return{
-        type: "DELETE",
-        payload : payload
-    }
-}
-// initial state
-
-const initialState = {  //lazm tb2a object
-    todos: [
-        // {
-        //     title: "learn node js",
-        //     content: "Lorem ipsum dolor sit amet.",
-        //   },
-        //   {
-        //     title: "go to the sea",
-        //     content: "Lorem ipsum dolor sit amet.",
-        //   },
-        //   {
-        //     title: "walk the dog",
-        //     content: "Lorem ipsum dolor sit amet.",
-        //   }
-    ]
-    
-}
-
-// reducer 
-
-const todoReducer = (state = initialState,action)=>{
-    if (action.type === "ADD_TODO"){
-        return {... state, todos:[...state.todos,action.payload]}
-    }
-    if (action.type === "DELETE"){
-        return {... state, todos:[...state.todos.filter((item,index) =>{return index !== action.payload})]}
-    }
-    return state ;
-}
-
-
-
-// store
-export const store = createStore(
-    todoReducer
-);
+  });
