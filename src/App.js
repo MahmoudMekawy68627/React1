@@ -9,6 +9,7 @@ import Shop from './Pagess/shop';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Product from "./Pagess/shop/Product";
 import Todo from './Pagess/todo/Todo'
+import Signup from "./Pagess/signUp";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="shop" element={<Shop />} />
         <Route path="product/:id" element={<Product />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/register" element={<Signup />} />
 
       </Routes>
 

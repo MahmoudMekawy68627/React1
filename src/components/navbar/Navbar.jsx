@@ -25,6 +25,9 @@ function Navbar() {
                 <li>
                     <Link to="/todo">Todo</Link>
                 </li>
+                <li>
+                    <Link to="/register">Sign Up</Link>
+                </li>
             </ul>
 
 
